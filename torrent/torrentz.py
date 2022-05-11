@@ -7,7 +7,7 @@ def torrent_api():
     torrent_results = input('Enter here to search: ')
     print(f"Searching {torrent_results} Please Wait....")
     torrent_results.replace(' ', '+')
-    response = requests.get(f'https://torrentzeu.org/kick.php?q={torrent_results}')
+    response = requests.get(f'https://2torrentz2eu.in/data.php?q={torrent_results}')
     # print(r.status_code)
     try:
             soup = BeautifulSoup(response.text,'html.parser')
