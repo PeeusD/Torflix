@@ -5,6 +5,7 @@ def main():
     
     try:  
         results = torrent_api()
+       
         magnets = []
         for key, value in results.items():
             magnets.append(value[5])

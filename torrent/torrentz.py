@@ -7,7 +7,7 @@ def torrent_api():
     torrent_results = input('Enter here to search: ')
     print(f"Searching {torrent_results} Please Wait....")
     torrent_results.replace(' ', '+')
-    response = requests.get(f'https://2torrentz2eu.in/data.php?q={torrent_results}')
+    response = requests.get(f'https://torrentz2.pics/data.php?q={torrent_results}')
     # print(r.status_code)
     try:
             soup = BeautifulSoup(response.text,'html.parser')
@@ -33,9 +33,11 @@ def torrent_api():
                     
                     res_lst.extend([movie_name, leeches, seeds, file_size, last_updt, magnets])  #appending multiple values into res_lst...
                     res[i] = res_lst
-
+            print(res)
             return res
     except Exception as e:
         #print('Result not found, Error: ',e)     
         return e
 
+
+# torrent_api()  # DEBUGGING
